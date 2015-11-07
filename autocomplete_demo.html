@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular Example</title>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+    <script src="./bossy.utility.js"></script>
+    <script src="./bossy.bktree.js"></script>
+    <script src="./bossy.autocomplete.js"></script>
+    <script src="./my_ctrl.js"></script>
+  </head>
+  <body ng-app="app">
+    <div ng-controller="MyCtrl">
+      <h1>Autocomplete Demo</h1>
+      <bossy-autocomplete dict="dict" ng-attr-max-corrections="tol"></bossy-autocomplete>
+      <p><strong>Correction tolerance: </strong>{{tol}}</p>
+      <strong>Dictionary:</strong>
+      <ul><li ng-repeat="w in dict">{{w}}</li></ul>
+    </div>
+  </body>
+</html>
